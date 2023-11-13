@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const plusElement = document.querySelector(".plus");
   const minusElement = document.querySelector(".minus");
-  counter = 0;
+  let counter = 0;
 
   plusElement.addEventListener("click", () => {
     counter++;
