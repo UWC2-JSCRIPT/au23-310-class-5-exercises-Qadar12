@@ -8,7 +8,7 @@ const addDone = (e) => {
 };
 
 // use here and delete later
-let todayList = document.getElementsByClassName("today-list")[0];
+const todayList = document.getElementsByClassName("today-list")[0];
 todayList.addEventListener("click", addDone);
 
 // If a delete link is clicked, delete the li element / remove from the DOM
@@ -17,8 +17,8 @@ todayList.addEventListener("click", addDone);
 const removeItem = (e) => {
   e.preventDefault();
   if (e.target.tagName === "A" && e.target.classList.contains("delete")) {
-    let li = e.target.parentNode;
-    let ul = li.parentNode;
+    const li = e.target.parentNode;
+    const ul = li.parentNode;
     ul.removeChild(li);
   }
 };
@@ -33,12 +33,12 @@ const addListItem = function (e) {
   const input = this.parentNode.getElementsByTagName("input")[0];
   const text = input.value; // input
 
-  let createli = document.createElement("li");
+  const createli = document.createElement("li");
 
-  let createSpan = document.createElement("span");
+  const createSpan = document.createElement("span");
   createSpan.textContent = text;
 
-  let createATag = document.createElement("a");
+  const createATag = document.createElement("a");
   createATag.textContent = "Delete";
   createATag.className = "delete";
 
@@ -53,8 +53,8 @@ const addListItem = function (e) {
 };
 
 // get add item clicked - parent to child
-let addElm = document.getElementsByClassName("add")[0];
-let addItem = addElm.querySelector(".add-item");
+const addElm = document.getElementsByClassName("add")[0];
+const addItem = addElm.querySelector(".add-item");
 
 addItem.addEventListener("click", addListItem);
 
